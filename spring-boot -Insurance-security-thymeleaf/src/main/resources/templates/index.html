@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout :: site-head">
+    <title>Spring Insurance</title>
+     <link rel="stylesheet" href="../public/css/insurance.css"
+          th:href="@{/css/insurance.css}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+</head>
+
+<body>
+<header th:replace="layout :: site-header" >
+ </header>
+<h1>Welcome to Spring Insurance</h1>
+Current Time And Date: <b th:text="${execInfo.now.time}"></b>
+
+
+<footer th:replace="layout :: site-footer" >
+</footer>
+</body>
+
+</html>
+

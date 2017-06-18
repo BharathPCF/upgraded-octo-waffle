@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf + Spring Security</title>
+
+    <div th:replace="fragments/header :: header-css"/>
+
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="container">
+
+    <div class="starter-template">
+    
+        <h1>Spring Boot Web Thymeleaf With Spring Security</h1>
+        
+        <h2><a th:href="@{/admin}"><span class="glyphicon  glyphicon-null" aria-hidden="true"></span>
+        Only Admin will have access to this page</a></h2>
+        
+        <h2><a th:href="@{/user}">All users Can Also Can Access the page</a></h2>
+
+    </div>
+
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer :: footer"/>
+
+  <script src="/webjars/jquery/2.2.4/jquery.min.js"></script>
+  <script src="/webjars/jquery-ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="/webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

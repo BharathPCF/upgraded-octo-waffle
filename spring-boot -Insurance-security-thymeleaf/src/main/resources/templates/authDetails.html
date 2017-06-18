@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" >
+ 
+<head th:fragment="site-head">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../public/css/styles.css"
+          th:href="@{/css/styles.css}" />
+          
+          <link rel="stylesheet" href="../public/css/insurance.css"
+          th:href="@{/css/insurance.css}" />
+              <link rel="stylesheet" href="/resources/css/m.css"/>
+          
+    <link rel="icon" href="../public/img/favicon.ico"
+          th:href="@{/img/favicon.ico}" />
+    <script src="../public/js/jquery-3.1.0.min.js"
+            th:src="@{/js/jquery-3.1.0.min.js}"></script>
+    <script src="../public/js/blog-scripts.js" th:src="@{/js/blog-scripts.js}"></script>
+    <script src="js/client.js" th:src="@{js/client.js}"></script>
+     <script src="/webjars/jquery/2.2.4/jquery.min.js"></script>
+  <script src="/webjars/jquery-ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="/webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   
+</head>
+  <body>
+  	
+  <form th:action="@{/}" method="get">
+  <p align="right">
+		<button class="btn btn-default" type="Submit" >Home Page</button>
+		</p>
+	</form>	
+  
+  
+    <h1><b>User Insurance Detail</b></h1>
+  
+  
+    <table class="table table-striped" th:object="${user}">
+      <tr>
+        <th>Name</th>
+        <td><b th:text="*{firstname + ' ' + lastname}"></b></td>
+      </tr>
+      <tr>
+        <th>Address</th>
+        <td th:text="*{address}" > </td>
+      </tr>
+      <tr>	
+        <th>City</th>
+        <td th:text="*{email}" ></td>
+      </tr>
+      <tr>
+        <th>Telephone</th>
+        <td th:text="*{mobileno}" ></td>
+      </tr>
+    </table>
+  
+    <a th:href="@{{id}/edit(id=${user.id})}" class="btn btn-default">Edit Details 
+      	</a>
+    <a th:href="@{{id}/user/new(id=${user.id})}" class="btn btn-default">Add
+      New Insurance</a>
+  
+ 
+    
+  </body>
+
+</html>
